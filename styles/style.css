@@ -1,0 +1,165 @@
+/* Font Definitions */
+
+@font-face {
+  font-family: Tahoma;
+  panose-1: 2 11 6 4 3 5 4 4 2 4;
+}
+
+@font-face {
+  font-family: Leelawadee;
+  panose-1: 2 11 5 2 4 2 4 2 2 3;
+}
+
+@font-face {
+  font-family: "Edwardian Script ITC";
+  panose-1: 3 3 3 2 4 7 7 13 8 4;
+}
+
+@font-face {
+  font-family: "Comic Sans MS";
+  panose-1: 3 15 7 2 3 3 2 2 2 4;
+}
+/* Style Definitions */
+
+p.MsoNormal,
+li.MsoNormal,
+div.MsoNormal {
+  margin: 0in;
+  margin-bottom: .0001pt;
+  font-size: 10.0pt;
+  font-family: "Times New Roman", "serif";
+}
+
+h1 {
+  margin: 0in;
+  margin-bottom: .0001pt;
+  page-break-after: avoid;
+  font-size: 14.0pt;
+  font-family: "Arial", "sans-serif";
+  color: lime;
+  font-weight: normal;
+}
+
+h2 {
+  margin: 0in;
+  margin-bottom: .0001pt;
+  text-align: center;
+  page-break-after: avoid;
+  font-size: 12.0pt;
+  font-family: "Arial", "sans-serif";
+  color: lime;
+  font-weight: normal;
+}
+
+h3 {
+  margin: 0in;
+  margin-bottom: .0001pt;
+  text-align: center;
+  page-break-after: avoid;
+  font-size: 12.0pt;
+  font-family: "Comic Sans MS";
+  color: blue;
+  font-weight: normal;
+}
+
+h4 {
+  margin: 0in;
+  margin-bottom: .0001pt;
+  page-break-after: avoid;
+  font-size: 12.0pt;
+  font-family: "Comic Sans MS";
+  color: blue;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+h5 {
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: .5in;
+  margin-bottom: .0001pt;
+  page-break-after: avoid;
+  font-size: 12.0pt;
+  font-family: "Comic Sans MS";
+  color: blue;
+  font-weight: normal;
+}
+
+h6 {
+  margin: 0in;
+  margin-bottom: .0001pt;
+  page-break-after: avoid;
+  font-size: 12.0pt;
+  font-family: "Comic Sans MS";
+  color: blue;
+}
+
+p.MsoBodyText,
+li.MsoBodyText,
+div.MsoBodyText {
+  margin: 0in;
+  margin-bottom: .0001pt;
+  font-size: 12.0pt;
+  font-family: "Comic Sans MS";
+  color: blue;
+}
+
+a:link,
+span.MsoHyperlink {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:visited,
+span.MsoHyperlinkFollowed {
+  color: purple;
+  text-decoration: underline;
+}
+
+p.MsoAcetate,
+li.MsoAcetate,
+div.MsoAcetate {
+  mso-style-link: "Balloon Text Char";
+  margin: 0in;
+  margin-bottom: .0001pt;
+  font-size: 8.0pt;
+  font-family: "Tahoma", "sans-serif";
+}
+
+span.apple-converted-space {
+  mso-style-name: apple-converted-space;
+}
+
+span.BalloonTextChar {
+  mso-style-name: "Balloon Text Char";
+  mso-style-link: "Balloon Text";
+  font-family: "Tahoma", "sans-serif";
+}
+
+@page WordSection1 {
+  size: 8.5in 11.0in;
+  margin: .75in 1.0in .75in 1.0in;
+}
+
+div.WordSection1 {
+  page: WordSection1;
+}
+
+@page WordSection2 {
+  size: 8.5in 11.0in;
+  margin: 1.0in 1.0in .75in 1.0in;
+}
+
+div.WordSection2 {
+  page: WordSection2;
+}
+/* List Definitions */
+
+ol {
+  margin-bottom: 0in;
+}
+
+ul {
+  margin-bottom: 0in;
+}
