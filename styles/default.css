@@ -30,70 +30,6 @@ div.MsoNormal {
   font-family: "Times New Roman", "serif";
 }
 
-h1 {
-  margin: 0in;
-  margin-bottom: .0001pt;
-  page-break-after: avoid;
-  font-size: 14.0pt;
-  font-family: "Arial", "sans-serif";
-  color: lime;
-  font-weight: normal;
-}
-
-h2 {
-  margin: 0in;
-  margin-bottom: .0001pt;
-  text-align: center;
-  page-break-after: avoid;
-  font-size: 12.0pt;
-  font-family: "Arial", "sans-serif";
-  color: lime;
-  font-weight: normal;
-}
-
-h3 {
-  margin: 0in;
-  margin-bottom: .0001pt;
-  text-align: center;
-  page-break-after: avoid;
-  font-size: 12.0pt;
-  font-family: "Comic Sans MS";
-  color: blue;
-  font-weight: normal;
-}
-
-h4 {
-  margin: 0in;
-  margin-bottom: .0001pt;
-  page-break-after: avoid;
-  font-size: 12.0pt;
-  font-family: "Comic Sans MS";
-  color: blue;
-  font-weight: normal;
-  text-decoration: underline;
-}
-
-h5 {
-  margin-top: 0in;
-  margin-right: 0in;
-  margin-bottom: 0in;
-  margin-bottom: .0001pt;
-  page-break-after: avoid;
-  font-size: 12.0pt;
-  font-family: "Comic Sans MS";
-  color: blue;
-  font-weight: normal;
-}
-
-h6 {
-  margin: 0in;
-  margin-bottom: .0001pt;
-  page-break-after: avoid;
-  font-size: 12.0pt;
-  font-family: "Comic Sans MS";
-  color: blue;
-}
-
 p.MsoBodyText,
 li.MsoBodyText,
 div.MsoBodyText {
@@ -102,18 +38,6 @@ div.MsoBodyText {
   font-size: 12.0pt;
   font-family: "Comic Sans MS";
   color: blue;
-}
-
-a:link,
-span.MsoHyperlink {
-  color: blue;
-  text-decoration: underline;
-}
-
-a:visited,
-span.MsoHyperlinkFollowed {
-  color: purple;
-  text-decoration: underline;
 }
 
 p.MsoAcetate,
