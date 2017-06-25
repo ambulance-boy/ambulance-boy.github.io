@@ -1,51 +1,50 @@
-body span
-{
-    color: #333;
+*{margin:0;}
+
+html, body{
+    overflow:hidden;
 }
 
-#wrapper
-{
+#container1 {
     text-align: center;
 }
 
-#content
-{
-    height:100%;
-    width: 616px;
-    display: inline-block;
-}
-
-#resume, .outerhidescroll
-{
-    width:100%;
-    height: 750px;
-    width: 616px;
-}
-
-.outerhidescroll
-{
+#container1{
     height: 100%;
     width: 100%;
     overflow: hidden;
 }
 
-.innerhidescroll
-{
+#container2 {
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
-    padding-right: 17px;
+    overflow: auto;
+    padding-right: 0px; /* exact value is given in JavaScript code */
 }
 
-#resume
+body span
 {
+    color: #333;
+}
+
+#resume {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
-    overflow-y: scroll;
-    margin-bottom: 20px;
+    background-position: center top;
+    /*margin-bottom: 20px;*/
 }
 
-p.MsoBodyText span
-{
-    font-family:"Leelawadee","sans-serif";
+.description {
+    max-width: 616px;
+    margin: 0 auto;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+}
+
+.header div {
+    background-color: white;
 }
