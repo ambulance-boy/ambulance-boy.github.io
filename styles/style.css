@@ -33,18 +33,21 @@ body span
     /*margin-bottom: 20px;*/
 }
 
-.description {
+#description {
     max-width: 616px;
     margin: 0 auto;
     padding-right: 2em;
     padding-left: 2em;
 }
 
-.header {
+#header-wrap {
     position: fixed;
     width: 100%;
+    padding-bottom: 10px;
 }
 
-.header div {
+.header {
     background-color: white;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }

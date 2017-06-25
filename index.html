@@ -12,16 +12,21 @@
 
   <div id="container1">
     <div id="container2">
-      <div class="header">
-        <div>
-          <p class=MsoBodyText>
-            <b><span style='font-size:14.0pt;'>Joseph Santoro, Pianist</span></b>
-          </p>
-          <a href="mailto:me@josephsantoro.me" style="color:mediumblue;">me@josephsantoro.me</a>
-          <span style='font-size:12.0pt;'><br clear=all style='page-break-before:auto'></span>
+      <div id="header-wrap">
+        <div class="header">
+          <div class="name">
+            <p class=MsoBodyText>
+              <b><span style='font-size:14.0pt;'>Joseph Santoro, Pianist</span></b>
+            </p>
+            <a href="mailto:me@josephsantoro.me" style="color:mediumblue;">me@josephsantoro.me</a>
+          </div>
+          <div class="youtube">
+              <span>View on YouTube</span>
+              <a href="https://www.youtube.com/channel/UCUSJpW4sMvpgdHcEqwNnr9Q" target="_blank" ><img height="32px" src="images/youtube.png" alt="YouTube" /></a>
+          </div>
         </div>
       </div>
-      <div class="description">
+      <div id="description">
         <p class="MsoBodyText">
           <span style='font-size:11.0pt;'>
             A creative musician and composer, Joseph has been playing piano for over ten years.
@@ -31,15 +36,16 @@
           </span>
         </p>
       </div>
-      <div class="youtube" style="margin-top: 1em;">
-          <a href="https://www.youtube.com/channel/UCUSJpW4sMvpgdHcEqwNnr9Q" target="_blank" ><img height="32px" src="images/youtube.png" alt="YouTube" /></a>
-          <br/><span>View on YouTube</span>
-      </div>
       <span style='font-size:12.0pt;'><br clear=all style='page-break-before:auto'></span>
     </div>
   </div>
 
-
+  <script>
+    $( document ).ready(function() {
+      var description = document.getElementById('description');
+      description.style.paddingTop = document.getElementById('header-wrap').offsetHeight;
+    });
+  </script>
 </body>
 
 </html>
