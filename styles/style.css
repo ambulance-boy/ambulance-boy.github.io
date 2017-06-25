@@ -30,12 +30,16 @@ body span
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-position: center top;
+    height: 750px;
     /*margin-bottom: 20px;*/
 }
 
 #description {
     max-width: 616px;
     margin: 0 auto;
+}
+
+#description p {
     padding-right: 2em;
     padding-left: 2em;
 }

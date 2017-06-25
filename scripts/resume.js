@@ -4,10 +4,18 @@
   var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
   // + "/od6/public/basic?alt=json"; // Alternate data format
 
-  $.getJSON(url, function(data) {
-    var resume = document.createElement("div");
-    resume.id = "resume";
+  var songs = document.createElement("div");
+  $( document ).ready(function() {
+    // var parent = document.getElementById('container1');
+    var child = document.getElementById('container2');
+    var resume = document.getElementById('resume');
+    resume.appendChild(songs);
 
+    child.style.paddingRight = (child.offsetWidth - child.clientWidth)/2 + "px"; // Adjust for scrollbar
+    child.style.paddingLeft = (child.offsetWidth - child.clientWidth)/2 + "px"; // Adjust for scrollbar
+  });
+
+  $.getJSON(url, function(data) {
     $(data.feed.entry).each(function(){
       // Column names are name, age, etc.
       // $('.results').prepend('<h2>'+this.gsx$name.$t+'</h2><p>'+this.gsx$age.$t+'</p>');
@@ -15,28 +23,19 @@
       title.className += "MsoBodyText";
 
       var titleSpan = document.createElement("span");
+      titleSpan.style.fontSize = "14pt";
       titleSpan.appendChild(document.createTextNode(this.gsx$title.$t));
       title.appendChild(titleSpan);
 
       var artist = document.createElement("p");
       artist.className += "MsoBodyText";
       var artistSpan = document.createElement("span");
-
-      artistSpan.style.fontSize = "10pt";
       artistSpan.appendChild(document.createTextNode(this.gsx$artist.$t));
       artist.appendChild(artistSpan);
 
-      resume.appendChild(title);
-      resume.appendChild(artist);
-      resume.appendChild(document.createElement("br"));
-    });
-
-    $( document ).ready(function() {
-      var parent = document.getElementById('container1');
-      var child = document.getElementById('container2');
-      child.appendChild(resume);
-
-      child.style.paddingRight = child.offsetWidth - child.clientWidth + "px"; // Adjust for scrollbar
+      songs.appendChild(title);
+      songs.appendChild(artist);
+      songs.appendChild(document.createElement("br"));
     });
   });
 })();
