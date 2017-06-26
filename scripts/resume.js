@@ -9,6 +9,7 @@
     // var parent = document.getElementById('container1');
     var child = document.getElementById('container2');
     var resume = document.getElementById('resume');
+    resume.style.height = screen.height;
     resume.appendChild(songs);
 
     child.style.paddingRight = (child.offsetWidth - child.clientWidth)/2 + "px"; // Adjust for scrollbar

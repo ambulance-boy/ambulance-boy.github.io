@@ -22,7 +22,7 @@
           </div>
           <div class="youtube">
               <span>View on YouTube</span>
-              <a href="https://www.youtube.com/channel/UCUSJpW4sMvpgdHcEqwNnr9Q" target="_blank" ><img height="32px" src="images/youtube.png" alt="YouTube" /></a>
+              <a href="https://www.youtube.com/channel/UCUSJpW4sMvpgdHcEqwNnr9Q" target="_blank" ><img height="32px" src="images/watch.png" alt="YouTube" /></a>
           </div>
         </div>
       </div>
@@ -43,9 +43,10 @@
 
   <script>
     $( document ).ready(function() {
-
+      var header_wrap = document.getElementById('header-wrap');
       var description = document.getElementById('description');
-      description.style.paddingTop = document.getElementById('header-wrap').offsetHeight;
+      header_wrap.style.position = "fixed";
+      description.style.paddingTop = header_wrap.offsetHeight;
     });
   </script>
 </body>
