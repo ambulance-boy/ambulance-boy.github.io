@@ -26,8 +26,13 @@ body span
     color: #333;
 }
 
-/* http://www.korenlc.com/css-overlay-how-to-create-a-simple-css-overlay/ */
+/* https://stackoverflow.com/questions/20214735/can-you-make-a-child-div-larger-than-parent-without-position-absolute */
+#content-wrap {
+    width: 100vw;/* <-- children as wide as the browser window (viewport) */
+    margin-left: calc(-1 * ((100vw - 100%) / 2));/* align left edge to the left edge of the viewport */
+}
 
+/* http://www.korenlc.com/css-overlay-how-to-create-a-simple-css-overlay/ */
 #resume {
     display: block;
     height: 100%;
