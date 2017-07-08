@@ -26,9 +26,22 @@ body span
     color: #333;
 }
 
+/* http://www.korenlc.com/css-overlay-how-to-create-a-simple-css-overlay/ */
+
 #resume {
+    display: block;
     height: 100%;
     width: 100%;
+    position: relative;
+}
+
+/* Overlay div on background */
+#resume div:nth-of-type(2) {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
 
 #background {
@@ -39,7 +52,7 @@ body span
     background-repeat: no-repeat;
     background-position: center top;
     height: 100%;
-    width: 900px;
+    max-width: 900px;
 }
 
 #background:before {
@@ -51,15 +64,6 @@ body span
     left: 0;
     right: 0;
 }
-
-/*#resume div {
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    position: absolute;
-}*/
 
 #description {
     max-width: 616px;
