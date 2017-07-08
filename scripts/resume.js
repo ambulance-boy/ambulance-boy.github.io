@@ -9,11 +9,10 @@
     // var parent = document.getElementById('container1');
     var child = document.getElementById('container2');
     var resume = document.getElementById('resume');
-    resume.style.height = screen.height;
+    resume.style.height = Math.max(screen.height, 900); // Compare screen height to background
     resume.appendChild(songs);
 
-    child.style.paddingRight = (child.offsetWidth - child.clientWidth)/2 + "px"; // Adjust for scrollbar
-    child.style.paddingLeft = (child.offsetWidth - child.clientWidth)/2 + "px"; // Adjust for scrollbar
+    child.style.paddingLeft = child.style.paddingRight = (child.offsetWidth - child.clientWidth)/2 + "px"; // Adjust for scrollbar
   });
 
   $.getJSON(url, function(data) {
