@@ -1,3 +1,4 @@
+/* https://tympanus.net/codrops/2013/11/07/css-overlay-techniques/*/
 /* http://www.korenlc.com/css-overlay-how-to-create-a-simple-css-overlay/ */
 #resume {
     display: block;
@@ -10,7 +11,7 @@
     margin: auto;
     position: relative;
     background-color: white;
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background.png");
     background-repeat: no-repeat;
     background-position: center top;
     height: 100%;
