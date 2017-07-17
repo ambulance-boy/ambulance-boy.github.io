@@ -1,0 +1,38 @@
+#header-wrap {
+    z-index: 100;
+    left: 0;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 900px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background: #f5f6f6; /* Old browsers */
+    background: -moz-linear-gradient(top, #dbdce2 0%, #dbdce2 21%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #dbdce2 0%,#dbdce2 21%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #dbdce2 0%,#dbdce2 21%,#dddfe3 80%,#f5f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+}
+
+.header span {
+    text-shadow: 1px 1px 0 #ccc;
+    color: #483f3f;
+}
+
+.name {
+    font-weight: bold;
+    font-size:14.0pt;
+}
+
+.email {
+    color: mediumblue;
+}
+
+.view {
+    float: right;
+    margin-top: -38px;
+    margin-right: 10px;
+}

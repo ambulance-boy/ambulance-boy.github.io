@@ -1,14 +1,16 @@
-*{margin:0;}
+* { margin:0; }
 
-html, body{
-    overflow:hidden;
+html, body{ overflow:hidden; }
+
+body span {
+    color: #333;
 }
 
 #container1 {
     text-align: center;
 }
 
-#container1{
+#container1 {
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -19,11 +21,6 @@ html, body{
     height: 100%;
     overflow: auto;
     padding-right: 0px; /* exact value is given in JavaScript code */
-}
-
-body span
-{
-    color: #333;
 }
 
 /* https://stackoverflow.com/questions/20214735/can-you-make-a-child-div-larger-than-parent-without-position-absolute */
@@ -80,47 +77,6 @@ body span
     padding-left: 2em;
 }
 
-#header-wrap {
-    z-index: 100;
-    left: 0;
-    width: 100%;
-    padding-bottom: 10px;
-}
-
-.header {
-    background-color: white;
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-
-ul {
-    max-width: 900px;
-    z-index: 1000;
-    position: fixed;
-    overflow: visible;
-    display: block;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    font-family: 'Oswald', sans-serif;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    position: relative;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-
-}
-
-li a:hover {
-    background-color: #111;
+#description span {
+    font-size:13.0pt;
 }

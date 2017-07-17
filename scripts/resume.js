@@ -5,6 +5,7 @@
   // + "/od6/public/basic?alt=json"; // Alternate data format
 
   var songs = document.createElement("div");
+  songs.id = "songs";
   $( document ).ready(function() {
     // var parent = document.getElementById('container1');
     var child = document.getElementById('container2');
