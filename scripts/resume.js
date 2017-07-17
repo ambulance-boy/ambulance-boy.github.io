@@ -6,14 +6,13 @@
 
   var songs = document.createElement("div");
   songs.id = "songs";
-  $( document ).ready(function() {
-    // var parent = document.getElementById('container1');
+  $(document).ready(function() {
     var child = document.getElementById('container2');
     var resume = document.getElementById('resume');
-    resume.style.height = Math.max(screen.height, 900); // Compare screen height to background
     resume.appendChild(songs);
 
     child.style.paddingLeft = child.style.paddingRight = (child.offsetWidth - child.clientWidth)/2 + "px"; // Adjust for scrollbar
+    resume.style.height = Math.max(screen.height, 900); // Compare screen height to background
   });
 
   $.getJSON(url, function(data) {
@@ -22,7 +21,6 @@
       // $('.results').prepend('<h2>'+this.gsx$name.$t+'</h2><p>'+this.gsx$age.$t+'</p>');
       var title = document.createElement("p");
       title.className += "MsoBodyText";
-
       var titleSpan = document.createElement("span");
       titleSpan.style.fontSize = "14pt";
       titleSpan.appendChild(document.createTextNode(this.gsx$title.$t));
