@@ -45,12 +45,15 @@
 
   <script>
     // Creates sticky header and offsets content below it
-    $( document ).ready(function() {
+    $( document ).ready(header);
+    window.addEventListener("resize", header);
+
+    function header() {
       var header_wrap = document.getElementById('header-wrap');
       var description = document.getElementById('description');
       header_wrap.style.position = "fixed";
       description.style.paddingTop = header_wrap.offsetHeight;
-    });
+    }
   </script>
 </body>
 
