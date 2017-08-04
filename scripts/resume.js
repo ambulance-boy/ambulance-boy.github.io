@@ -20,14 +20,13 @@
       // Column names are name, age, etc.
       // $('.results').prepend('<h2>'+this.gsx$name.$t+'</h2><p>'+this.gsx$age.$t+'</p>');
       var title = document.createElement("p");
-      title.className += "MsoBodyText";
+      title.className += "title";
       var titleSpan = document.createElement("span");
-      titleSpan.style.fontSize = "14pt";
       titleSpan.appendChild(document.createTextNode(this.gsx$title.$t));
       title.appendChild(titleSpan);
 
       var artist = document.createElement("p");
-      artist.className += "MsoBodyText";
+      artist.className += "artist";
       var artistSpan = document.createElement("span");
       artistSpan.appendChild(document.createTextNode(this.gsx$artist.$t));
       artist.appendChild(artistSpan);

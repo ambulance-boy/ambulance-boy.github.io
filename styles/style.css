@@ -1,27 +1,30 @@
 * { margin:0; }
 
-html, body{ overflow:hidden; }
+/* font-size base */
+html { font-size: 1em; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    html {
+        font-size: 2.2em;
+        line-height: 1.2;
+    }
+}
 
 body span {
     color: #333;
 }
 
-.MsoNormal,
-.MsoBodyText {
-    margin: 0in;
-    margin-bottom: .0001pt;
-    font-size: 12.0pt;
-}
-
-.MsoNormal {
-  font-family: "Times New Roman", "serif";
-}
-
-.MsoBodyText {
+#description {
   font-family:"Leelawadee","sans-serif";
 }
 
+.artist, .title {
+  font-family: "Times New Roman", "serif";
+}
+
 /* Hide Scroll Bar */
+html, body{ overflow:hidden; }
+
 #container1,
 #container2 {
     width: 100%;
@@ -46,13 +49,31 @@ body span {
 
 /* Description */
 #description {
-    max-width: 616px;
     margin: 0 auto;
+    max-width: 620px;
 }
 
 #description span {
     display: block;
-    font-size:13.0pt;
     padding-right: 2em;
     padding-left: 2em;
+    font-size: 110%;
+    text-align: justify;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    #description {
+        max-width: inherit;
+    }
+
+    #description span {
+        padding-top: .5em;
+        padding-right: 1em;
+        padding-left: 1em;
+        line-height: 1.4em;
+    }
+}
+
+.title {
+    font-size: 120%;
 }

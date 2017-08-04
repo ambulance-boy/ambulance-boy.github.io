@@ -24,7 +24,7 @@
 
 .name {
     font-weight: bold;
-    font-size:14.0pt;
+    font-size: 120%;
 }
 
 .email {
@@ -35,4 +35,26 @@
     float: right;
     margin-top: -38px;
     margin-right: 10px;
+}
+
+.view img {
+    height: 32px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .header {
+        max-width: none;
+    }
+
+    .email {
+        font-size: 110%;
+    }
+
+    .view {
+        margin-top: -78px;
+    }
+
+    .view img {
+        height: 64px;
+    }
 }
