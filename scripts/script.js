@@ -7,10 +7,10 @@ function resize() {
     // To prevent the background from taking up the description's space
     var content_height = $('#description').outerHeight() + $('#background div').height()/2;
     if ($(window).outerHeight()/2 < content_height) {
-        $(window).bind('mousewheel DOMMouseScroll', stationary_background);
+        $(window).bind('mousewheel DOMMouseScroll touchmove', stationary_background);
     }
     else {
-        $(window).unbind('mousewheel DOMMouseScroll', stationary_background);
+        $(window).unbind('mousewheel DOMMouseScroll touchmove', stationary_background);
         static_background();
     }
 }
@@ -25,27 +25,28 @@ function sticky_header() {
 
 function stationary_background(event) {
     var background = $('#background');
-    var delta = event.originalEvent.deltaY;
+    var delta = event.originalEvent.deltaY || 0;
 
     // This timeout allows the element to be offset before checking
     // else the scroll acts clunky
+    var timeout = (event.type == 'touchmove') ? 20 : 100;
     setTimeout(function() {
-        if (delta > 0 && !background.hasClass("stationary")) {
-            //TODO check if static height, set as static instead
-            if (false) {
+        if (delta >= 0 && !background.hasClass("stationary")) {
+            //Check if static height, set as static instead
+            if ($('#resume').offset().top < $(window).outerHeight()/2 - $('#background div').height()/2) {
                 static_background();
             }
             else if ($('#resume').offset().top < 40) {
                 static_background(0);
             }
         }
-        else if (delta < 0 && background.hasClass("stationary")) {
-            //TODO check if static height, reset stationary
-            if ($('#resume').offset().top > -40){
+        else if (delta <= 0 && background.hasClass("stationary")) {
+            //TODO check if static height, reset stationary (is glitchy atm)
+            if ($('#resume').offset().top > -40) {
                 background.removeClass("stationary");
             }
         }
-    }, 100);
+    }, timeout);
 }
 
 function static_background(top) {
