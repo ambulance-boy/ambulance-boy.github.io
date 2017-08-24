@@ -2,54 +2,64 @@ $( document ).ready(resize);
 window.addEventListener("resize", resize);
 
 function resize() {
-    header();
-    if ($(window).height() < $('#background').height()) {
-        remove_static_background();
-        $(window).bind('mousewheel', stationary_background);
+    sticky_header();
+
+    // To prevent the background from taking up the description's space
+    var content_height = $('#description').outerHeight() + $('#background div').height()/2;
+    if ($(window).outerHeight()/2 < content_height) {
+        $(window).bind('mousewheel DOMMouseScroll', stationary_background);
     }
     else {
-        $(window).unbind('mousewheel');
-        add_static_background();
+        $(window).unbind('mousewheel DOMMouseScroll', stationary_background);
+        static_background();
     }
 }
 
-
-
 // Creates sticky header and offsets content below it
-function header() {
+function sticky_header() {
   var header_wrap = document.getElementById('header-wrap');
   var description = document.getElementById('description');
   header_wrap.style.position = "fixed";
   description.style.paddingTop = header_wrap.offsetHeight;
 }
 
-function add_static_background() {
+function stationary_background(event) {
     var background = $('#background');
-    var header_wrap = $('#header-wrap');
+    var delta = event.originalEvent.deltaY;
+
+    // This timeout allows the element to be offset before checking
+    // else the scroll acts clunky
+    setTimeout(function() {
+        if (delta > 0 && !background.hasClass("stationary")) {
+            //TODO check if static height, set as static instead
+            if (false) {
+                static_background();
+            }
+            else if ($('#resume').offset().top < 40) {
+                static_background(0);
+            }
+        }
+        else if (delta < 0 && background.hasClass("stationary")) {
+            //TODO check if static height, reset stationary
+            if ($('#resume').offset().top > -40){
+                background.removeClass("stationary");
+            }
+        }
+    }, 100);
+}
+
+function static_background(top) {
+    var background = $('#background');
     background.addClass("stationary");
-    background.css("top", function() {
-        return ( $(window).height() - header_wrap.offsetHeight - background.offsetHeight/2);
+    if (!isNaN(top)) background.css("top", top);
+    else background.css("top", function(index) {
+        // Half screen height, half background image height
+        return ( $(window).outerHeight()/2 - $('#background div').height()/2 );
     });
 }
 
-function remove_static_background() {
-    var background = $('#background');
-    background.removeClass("stationary");
-}
 
-function stationary_background(event, delta) {
-    var background = $('#background');
-    if ($('#resume').offset().top < 0) {
-        if (!background.hasClass("stationary")) {
-            background.addClass("stationary");
-            background.css("top", 0);
-        }
-    }
-    else if (background.hasClass("stationary")) {
-        background.removeClass("stationary");
-    }
-}
-
+// This stops working after triggering static_background
 // $(document).on('keydown', function(e) {
 //     switch(e.which) {
 //         case 38: // up
