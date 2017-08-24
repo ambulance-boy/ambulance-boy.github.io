@@ -9,6 +9,7 @@
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="scripts/resume.js"></script>
+  <script type="text/javascript" src="scripts/script.js"></script>
 </head>
 
 <body lang=EN-US link=blue vlink=blue>
@@ -37,24 +38,12 @@
           </span>
         </div>
         <div id="resume">
-          <div id="background"></div>
+          <div id="background"><div></div></div>
         </div>
       </div>
     </div>
   </div>
 
-  <script>
-    // Creates sticky header and offsets content below it
-    $( document ).ready(header);
-    window.addEventListener("resize", header);
-
-    function header() {
-      var header_wrap = document.getElementById('header-wrap');
-      var description = document.getElementById('description');
-      header_wrap.style.position = "fixed";
-      description.style.paddingTop = header_wrap.offsetHeight;
-    }
-  </script>
 </body>
 
 </html>

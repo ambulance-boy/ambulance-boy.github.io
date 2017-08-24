@@ -23,7 +23,7 @@ body span {
 }
 
 /* Hide Scroll Bar */
-html, body{ overflow:hidden; }
+/*html { overflow:hidden; }*/
 
 #container1,
 #container2 {

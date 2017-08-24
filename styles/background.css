@@ -7,18 +7,26 @@
     width: 100%;
 }
 
-#background {
+#background.stationary {
+    margin: 0 auto;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0; /* This will be value of header */
+}
+
+#background div {
     margin: auto;
     position: relative;
     background-color: white;
     background-image: url("../images/background.png");
     background-repeat: no-repeat;
     background-position: center top;
-    height: 100%;
     max-width: 900px;
+    height: 100%;
 }
 
-#background:before {
+#background div:before {
     content: "";
     background: rgba(255, 255, 255, 0.8);
     position: absolute;
