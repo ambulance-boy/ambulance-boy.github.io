@@ -29,7 +29,7 @@ function stationary_background(event) {
 
     // This timeout allows the element to be offset before checking
     // else the scroll acts clunky
-    var timeout = (event.type == 'touchmove') ? 20 : 100;
+    var timeout = (event.type == 'touchmove') ? 20 : 25;
     setTimeout(function() {
         if (delta >= 0 && !background.hasClass("stationary")) {
             //Check if static height, set as static instead
